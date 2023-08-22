@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+.draggable-list {
+  list-style: none;
+  padding: 0;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  margin: 20px;
+}
+
+.draggable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+}
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-color);
+  font-size: 28px;
+}
+
+.draggable-list .person-name {
+  margin: 0 20px;
+}
+.draggable-list li.right .person-name {
+  color: #3ee374;
+}
+.draggable-list li.wrong .person-name {
+  color: #ff3a3a;
+}
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 60px);
+  padding: 20px;
+  flex: 1;
+}
+.draggable i {
+  padding-right: 10px;
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 80%;
+  }
+}
+.check-btn {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.check-btn:active {
+  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
+}
+.check-btn:focus {
+  outline: none;
+}

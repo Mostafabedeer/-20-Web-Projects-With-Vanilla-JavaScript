@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #296ca8;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 100px;
+}
+h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+.filter-container {
+  margin-top: 20px;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.filter {
+  width: 100%;
+  padding: 12px;
+}
+.filter:focus {
+  outline: 0;
+}
+
+.post {
+  position: relative;
+  background-color: #4992d3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 20px;
+  margin: 40px 0;
+  display: flex;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.post-info {
+  margin-left: 20px;
+}
+
+.post .post-title {
+  margin: 0;
+}
+.post .post-body {
+  margin: 15px 0 0;
+}
+
+.post .number {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  font-size: 15px;
+  color: #296ca8;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.loader {
+  opacity: 0;
+
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.loader .circle {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in-out infinite;
+  -webkit-animation: bounce 0.5s ease-in-out infinite;
+}
+.loader .circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.loader .circle:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}

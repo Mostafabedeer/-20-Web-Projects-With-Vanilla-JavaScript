@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  position: relative;
+  isolation: isolate;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url(imgs/7136723_3525821.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.form {
+  padding: 30px 40px;
+}
+.control-form {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.control-form label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+.control-form input {
+  border: 2px solid #f0f0f0;
+
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.control-form input:focus {
+  outline: none;
+  border-color: #777;
+}
+
+.control-form.success input {
+  border-color: var(--success-color);
+}
+.control-form.error input {
+  border-color: var(--error-color);
+}
+
+.control-form small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.control-form.error small {
+  visibility: visible;
+}
+.form button {
+  display: block;
+  cursor: pointer;
+  background-color: #3589db;
+  color: #fff;
+  border: 2px solid #3589db;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.form button:hover {
+  background-color: #5da1e2;
+}

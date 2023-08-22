@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffefea;
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+.btn {
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  background-color: darksalmon;
+  padding: 10px 8px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-size: 17px;
+  width: 100%;
+}
+.btn:active {
+  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
+}
+.btn.btn-toggle {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.text-box {
+  position: absolute;
+  color: #fff;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  background-color: rgb(51, 51, 51);
+  width: 70%;
+  -webkit-transform: translate(-50%, -800px);
+  -moz-transform: translate(-50%, -800px);
+  -ms-transform: translate(-50%, -800px);
+  -o-transform: translate(-50%, -800px);
+  padding: 30px;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.text-box.show {
+  transform: translate(-50%, 0px);
+  -webkit-transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  -o-transform: translate(-50%, 0px);
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  font-weight: 500;
+  font-size: 16px;
+  right: 5%;
+  top: 8%;
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  letter-spacing: 1.3px;
+}
+select {
+  width: 100%;
+  color: #fff;
+  background-color: darksalmon;
+  border: 0;
+  padding: 8px 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 15px 0;
+}
+textarea {
+  padding-left: 5px;
+  display: block;
+  width: 100%;
+  border: 1px solid #dadada;
+  height: 150px;
+  margin: 15px 0;
+  /* font-family: inherit; */
+  font-size: 16px;
+}
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out 0s;
+  -webkit-transition: box-shadow 0.2s ease-in-out 0s;
+  -moz-transition: box-shadow 0.2s ease-in-out 0s;
+  -ms-transition: box-shadow 0.2s ease-in-out 0s;
+  -o-transition: box-shadow 0.2s ease-in-out 0s;
+}
+.box.active {
+  box-shadow: 0 0 10px 5px darksalmon;
+}
+.box img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.box .info {
+  text-align: center;
+  color: #fff;
+  background-color: darksalmon;
+  padding: 10px 5px;
+  margin: 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: 100%;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
